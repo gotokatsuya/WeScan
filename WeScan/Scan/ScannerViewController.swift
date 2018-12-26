@@ -26,7 +26,7 @@ final class ScannerViewController: UIViewController {
     }()
     
     lazy private var activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
         activityIndicator.hidesWhenStopped = true
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         return activityIndicator
@@ -43,7 +43,7 @@ final class ScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = NSLocalizedString("wescan.scanning.title", tableName: nil, bundle: Bundle(for: ScannerViewController.self), value: "Scanning", comment: "The title of the ScannerViewController")
+        title = "レシートを撮影"
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: closeButton)
 
         setupViews()
